@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+}
+
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    margin-right: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: lightgreen;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.edit{
+    background-color: green;
+}
+
+.edit:hover{
+    background-color: darkgreen;
+}
+
+.delete{
+    background-color: red;
+}
+
+.delete:hover{
+    background-color: darkred;
+}
