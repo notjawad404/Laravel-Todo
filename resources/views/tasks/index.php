@@ -102,7 +102,11 @@ a {
                     <td><?php echo htmlspecialchars($task); ?></td>
                     <td>
                         <a href="/edit/<?php echo $id; ?>"><button class="edit">Edit</button></a>
-                        <a href="/delete/<?php echo $id; ?>" onclick="return confirm('Are you sure you want to delete this task?');" ><button class="delete">Delete</button></a>
+                        <form method="POST" action="/delete/<?php echo $id; ?>" onsubmit="return confirm('Are you sure you want to delete this task?');">
+                        <input type="hidden" name="_token" value="<?php echo csrf_token(); ?>">
+                        <button type="submit" class="delete">Delete</button>
+                        
+                        </form>
                     </td>
                 </tr>
             <?php endforeach; ?>

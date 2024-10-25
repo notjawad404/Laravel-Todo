@@ -11,7 +11,7 @@ class TaskController extends Controller
     public function index(){
         $tasks = session()->get('tasks', []);
         return view('tasks/index', ['tasks' => $tasks]);
-    }
+    } 
 
     public function save(Request $request){
         $tasks = session()->get('tasks', []);
@@ -36,7 +36,8 @@ class TaskController extends Controller
         return redirect('/');
     }
 
-    public function delete($id){
+    public function delete(Request $request, $id){
+        // dd($id);
         $tasks = session()->get('tasks', []);
         unset($tasks[$id]);
         session()->put('tasks', $tasks);
@@ -44,4 +45,3 @@ class TaskController extends Controller
         return redirect('/');
     }
 }
-

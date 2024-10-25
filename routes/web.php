@@ -12,6 +12,6 @@ Route::get('/', [TaskController::class, 'index']);
 Route::post('/save', [TaskController::class, 'save']);
 Route::get('/edit/{id}', [TaskController::class, 'edit']);
 Route::post('/update/{id}', [TaskController::class, 'update']);
-Route::get('/delete/{id}', [TaskController::class, 'delete']);
+Route::post('/delete/{id}', [TaskController::class, 'delete']);
 
 
